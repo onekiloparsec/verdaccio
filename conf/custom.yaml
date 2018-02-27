@@ -27,13 +27,13 @@ uplinks:
 
 packages:
   '*-arcsecond-*':
-    access: authenticated
-    publish: all
+    access: $authenticated
+    publish: $all
     proxy: npmjs
 
   '**':
-    access: authenticated
-    publish: all
+    access: $authenticated
+    publish: $all
     proxy: npmjs
 
 # log settings
