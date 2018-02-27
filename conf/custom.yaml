@@ -26,25 +26,14 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-  '@*/*':
-    # scoped packages
-    access: $authenticated
-    publish: $authenticated
+  '*-arcsecond-*':
+    access: authenticated
+    publish: all
     proxy: npmjs
 
   '**':
-    # allow all users (including non-authenticated users) to read and
-    # publish all packages
-    #
-    # you can specify usernames/groupnames (depending on your auth plugin)
-    # and three keywords: "$all", "$anonymous", "$authenticated"
-    access: $authenticated
-
-    # allow all known users to publish packages
-    # (anyone can register by default, remember?)
-    publish: $authenticated
-
-    # if package is not available locally, proxy requests to 'npmjs' registry
+    access: authenticated
+    publish: authenticated
     proxy: npmjs
 
 # log settings
