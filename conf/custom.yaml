@@ -18,7 +18,7 @@ auth:
     file: /verdaccio/conf/htpasswd
     # Maximum amount of users allowed to register, defaults to "+infinity".
     # You can set this to -1 to disable registration.
-    max_users: 1
+    max_users: 2
 
 # a list of other known repositories we can talk to
 uplinks:
@@ -33,7 +33,7 @@ packages:
 
   '**':
     access: authenticated
-    publish: authenticated
+    publish: all
     proxy: npmjs
 
 # log settings
